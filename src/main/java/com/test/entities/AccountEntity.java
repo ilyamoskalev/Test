@@ -1,4 +1,4 @@
-package entities;
+package com.test.entities;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -14,6 +14,10 @@ public class AccountEntity {
     @Column(name = "id", unique = true, nullable = false)
     private String id;
 
+    @Column(name = "balance", nullable = false, columnDefinition = "DECIMAL(10, 2) DEFAULT '0.00'")
+    private double balance;
+
+    @SuppressWarnings("unused")
     public AccountEntity() {
     }
 

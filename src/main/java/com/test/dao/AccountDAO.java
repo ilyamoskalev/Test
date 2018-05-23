@@ -1,6 +1,6 @@
-package dao;
+package com.test.dao;
 
-import entities.AccountEntity;
+import com.test.entities.AccountEntity;
 
 public interface AccountDAO {
     AccountEntity getById(String id);

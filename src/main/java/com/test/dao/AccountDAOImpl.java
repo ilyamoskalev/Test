@@ -1,6 +1,6 @@
-package dao;
+package com.test.dao;
 
-import entities.AccountEntity;
+import com.test.entities.AccountEntity;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
