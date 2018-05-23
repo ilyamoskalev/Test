@@ -12,4 +12,6 @@ public interface AccountDAO {
     void withdraw(String id, Double summ);
 
     Double getBalance(String id);
+
+    void clear();
 }

@@ -45,4 +45,9 @@ public class AccountDAOImpl implements AccountDAO {
                 .setParameter("id", id)
                 .getSingleResult();
     }
+
+    @Override
+    public void clear() {
+        entityManager.createQuery("DELETE FROM AccountEntity").executeUpdate();
+    }
 }

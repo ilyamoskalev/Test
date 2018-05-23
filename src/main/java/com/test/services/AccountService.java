@@ -64,7 +64,7 @@ public class AccountService {
         if (accountDAO.getById(id) == null) {
             return new ResponseEntity(HttpStatus.NOT_FOUND);
         }
-        return new ResponseEntity<>(new BalanceResponce(accountDAO.getBalance(id)),HttpStatus.CREATED);
+        return new ResponseEntity<>(new BalanceResponce(accountDAO.getBalance(id)),HttpStatus.OK);
     }
 
 }
