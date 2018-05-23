@@ -1,1 +1,1 @@
-# Test
+# Test [![Build Status](https://travis-ci.org/ilyamoskalev/Test.svg?branch=dev)](https://travis-ci.org/ilyamoskalev/Test)
