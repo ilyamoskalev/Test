@@ -1,1 +1,1 @@
-# Test [![Build Status](https://travis-ci.org/ilyamoskalev/Test.svg?branch=dev)](https://travis-ci.org/ilyamoskalev/Test) [![Coverage Status](https://coveralls.io/repos/github/ilyamoskalev/Test/badge.svg?branch=dev)](https://coveralls.io/github/ilyamoskalev/Test?branch=dev)
+# Test [![Build Status](https://travis-ci.org/ilyamoskalev/Test.svg?branch=dev)](https://travis-ci.org/ilyamoskalev/Test)
