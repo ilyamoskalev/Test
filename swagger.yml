@@ -29,7 +29,7 @@ paths:
       responses:
         201:
           description: |
-            Форум создан
+            Счет создан
         400:
           description: |
             Невалидный номер счета
@@ -141,3 +141,4 @@ definitions:
           Баланс
         example: |
           123.99
+
