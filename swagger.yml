@@ -96,7 +96,7 @@ paths:
               description: |
                 На счете недостаточно средств
   /{id}/balance:
-          put:
+          get:
             summary: Баланс
             description: |
               Узнать баланс счета с заданным номером
@@ -125,7 +125,7 @@ definitions:
     type: object
     properties:
       sum:
-        type: double
+        type: number
         readOnly: true
         description: |
           Сумма
@@ -135,7 +135,7 @@ definitions:
       type: object
       properties:
         balance:
-          type: double
+          type: number
           readOnly: true
           description: |
             Баланс
