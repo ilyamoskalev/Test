@@ -129,8 +129,7 @@ definitions:
         readOnly: true
         description: |
           Сумма
-        example: |
-          123.99
+        example: 123.99
   Balance:
     type: object
     properties:
@@ -139,6 +138,5 @@ definitions:
         readOnly: true
         description: |
           Баланс
-        example: |
-          123.99
+        example: 123.99
 
