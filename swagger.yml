@@ -53,7 +53,7 @@ paths:
           description: Сумма пополнения
           required: true
           schema:
-          $ref: '#/definitions/Sum'
+            $ref: '#/definitions/Sum'
         responses:
           200:
             description: |
@@ -81,7 +81,7 @@ paths:
             description: Сумма пополнения
             required: true
             schema:
-            $ref: '#/definitions/Sum'
+              $ref: '#/definitions/Sum'
           responses:
             200:
               description: |
@@ -131,6 +131,7 @@ definitions:
           Сумма
         example: |
           123.99
+        x-isnullable: false
   Balance:
     type: object
     properties:
