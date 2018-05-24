@@ -71,17 +71,17 @@ paths:
             Снять заданную сумму со счёта
           parameters:
           - name: id
-                  in: path
-                  description: Номер счета
-                  required: true
-                  type: string
-                  format: identity
+            in: path
+            description: Номер счета
+            required: true
+            type: string
+            format: identity
           - name: sum
-                  in: body
-                  description: Сумма пополнения.
-                  required: true
-                  schema:
-                    $ref: '#/definitions/Sum'
+            in: body
+            description: Сумма пополнения.
+            required: true
+            schema:
+              $ref: '#/definitions/Sum'
           responses:
             200:
               description: |
