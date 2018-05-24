@@ -78,7 +78,7 @@ paths:
             format: identity
           - name: sum
             in: body
-            description: Сумма пополнения.
+            description: Сумма пополнения
             required: true
             schema:
               $ref: '#/definitions/Sum'
