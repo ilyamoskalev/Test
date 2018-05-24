@@ -12,5 +12,4 @@ public class Validator {
     public static boolean ckeckSum(Double sum) {
         return sum > 0;
     }
-
 }

@@ -1,0 +1,143 @@
+swagger: '2.0'
+info:
+  title: Bank account
+  description: |
+    Тестовое задание
+  version: "0.1.0"
+schemes:
+- http
+- https
+basePath: /bankaccount
+consumes:
+- application/json
+produces:
+- application/json
+paths:
+  /{id}:
+    post:
+      summary: Завести новый счет
+      description: |
+        Завести новый счет с заданным номером
+      consumes: []
+      parameters:
+      - name: id
+        in: path
+        description: Номер счета
+        required: true
+        type: string
+        format: identity
+      responses:
+        201:
+          description: |
+            Форум создан
+        400:
+          description: |
+            Невалидный номер счета
+        409:
+          description: |
+            Счет с таким номером уже существует
+  /{id}/deposit:
+      put:
+        summary: Пополнить счет
+        description: |
+          Пополнить счет на заданную сумму
+        parameters:
+        - name: id
+          in: path
+          description: Номер счета
+          required: true
+          type: string
+          format: identity
+        - name: sum
+          in: body
+          description: Сумма пополнения
+          required: true
+          schema:
+          $ref: '#/definitions/Sum'
+        responses:
+          200:
+            description: |
+              Счет успешно пополнен
+          400:
+            description: |
+              Невалидный номер счета или сумма
+          404:
+            description: |
+              Счет с таким номером не существует
+  /{id}/withdraw:
+        put:
+          summary: Снять сумму со счёта
+          description: |
+            Снять заданную сумму со счёта
+          parameters:
+          - name: id
+            in: path
+            description: Номер счета
+            required: true
+            type: string
+            format: identity
+          - name: sum
+            in: body
+            description: Сумма пополнения
+            required: true
+            schema:
+            $ref: '#/definitions/Sum'
+          responses:
+            200:
+              description: |
+                Сумма успешно снята со счета
+            400:
+              description: |
+                Невалидный номер счета или сумма
+            404:
+              description: |
+                Счет с таким номером не существует
+            403:
+              description: |
+                На счете недостаточно средств
+  /{id}/balance:
+          put:
+            summary: Баланс
+            description: |
+              Узнать баланс счета с заданным номером
+            consumes: []
+            parameters:
+            - name: id
+              in: path
+              description: Номер счета
+              required: true
+              type: string
+              format: identity
+            responses:
+              200:
+                description: |
+                  Возврашает баланс счета
+                schema:
+                  $ref: '#/definitions/Balance'
+              400:
+                description: |
+                  Невалидный номер счета
+              404:
+                description: |
+                  Счет с таким номером не существует
+definitions:
+  Sum:
+    type: object
+    properties:
+      sum:
+        type: double
+        readOnly: true
+        description: |
+          Сумма
+        example: |
+          123.99
+  Balance:
+      type: object
+      properties:
+        balance:
+          type: double
+          readOnly: true
+          description: |
+            Баланс
+          example: |
+            123.99
