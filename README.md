@@ -11,7 +11,6 @@ docker run -p 8081:8081 --name [CONTAINER_NAME] -t [USERNAME]
 ```
 
 ## Сборка без использования Docker
-Контейнер будет собираться и запускаться командами вида:
 ```
 git clone https://github.com/ilyamoskalev/Test.git
 cd Test
