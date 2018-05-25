@@ -38,6 +38,9 @@ public class AccountService {
         if (accountDAO.getById(id) == null) {
             return new ResponseEntity(HttpStatus.NOT_FOUND);
         }
+        if (!Validator.ckeckSum(accountDAO.getBalance(id) + sum)) {
+            return new ResponseEntity(HttpStatus.FORBIDDEN);
+        }
         accountDAO.deposit(id, sum);
         return new ResponseEntity(HttpStatus.OK);
     }
@@ -64,7 +67,7 @@ public class AccountService {
         if (accountDAO.getById(id) == null) {
             return new ResponseEntity(HttpStatus.NOT_FOUND);
         }
-        return new ResponseEntity<>(new BalanceResponce(accountDAO.getBalance(id)),HttpStatus.OK);
+        return new ResponseEntity<>(new BalanceResponce(accountDAO.getBalance(id)), HttpStatus.OK);
     }
 
 }
