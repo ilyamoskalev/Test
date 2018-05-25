@@ -1,7 +1,7 @@
 # Test [![Build Status](https://travis-ci.org/ilyamoskalev/Test.svg?branch=dev)](https://travis-ci.org/ilyamoskalev/Test)
 
 ## Документация к API
-Документацию можно читать как собственно в файле swagger.yml, так и через Swagger UI (там же есть возможность поиграться с запросами): [Ссылка](http://petstore.swagger.io/?url=https://raw.githubusercontent.com/ilyamoskalev/Test/master/swagger.yml)
+Документацию можно читать как собственно в файле swagger.yml, так и через Swagger UI: [Ссылка](http://petstore.swagger.io/?url=https://raw.githubusercontent.com/ilyamoskalev/Test/master/swagger.yml)
 
 ## Сборка Docker контейнера
 Контейнер будет собираться и запускаться командами вида:
