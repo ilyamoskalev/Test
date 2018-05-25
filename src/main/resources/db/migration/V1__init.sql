@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS accounts (
+  id      VARCHAR(5) PRIMARY KEY,
+  balance DECIMAL(10, 2) NOT NULL DEFAULT '0.00'
+)
